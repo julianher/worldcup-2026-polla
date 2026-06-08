@@ -1,0 +1,2 @@
+capture_datetime,match_datetime,stage,match_id,home_team,away_team,source,p_home_raw,p_draw_raw,p_away_raw,ou_line,p_over_raw,p_under_raw,submitted_home,submitted_away,actual_home,actual_away,notes
+2026-06-07T20:30:00-04:00,2026-06-17T19:00:00-04:00,group,G-GHA-PAN,Ghana,Panama,polymarket,0.47,0.28,0.27,3.5,0.24,0.82,,,,,example row captured ~10d out; recapture day-before for the real pick
