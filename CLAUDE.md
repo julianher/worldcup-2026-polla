@@ -18,6 +18,8 @@ whole point.
 4. **Never renormalize Polymarket probabilities.** Enter them as captured and use
    `value_type="prob"`. (Codere decimal odds ARE de-vigged by the model.)
 5. **Read numbers from the screenshots only** — never recall odds from memory.
+6. **After any code change, run `python tests/test_polla.py`** — all tests must
+   pass before committing.
 
 ## Polymarket capture rule (how to read the numbers)
 
