@@ -60,7 +60,7 @@ class MatchComparison:
     cexact_pts: int | None
 
 
-def compare() -> tuple[list[MatchComparison], dict[str, int]]:
+def compare() -> tuple[list[MatchComparison], dict[str, int], dict[str, int]]:
     poly = pd.read_csv(os.path.join(DATA, "match_odds_polymarket.csv"))
     try:
         cod = pd.read_csv(os.path.join(DATA, "match_odds_codere.csv"))
@@ -70,6 +70,7 @@ def compare() -> tuple[list[MatchComparison], dict[str, int]]:
 
     rows: list[MatchComparison] = []
     totals = {"poly_model": 0, "codere_model": 0, "codere_exact": 0}
+    counts = {"poly_model": 0, "codere_model": 0, "codere_exact": 0}
 
     for _, r in poly.iterrows():
         if not _has_result(r):
@@ -85,6 +86,7 @@ def compare() -> tuple[list[MatchComparison], dict[str, int]]:
         poly_pred = rp.best_pred
         poly_pts = score_points(poly_pred, actual, knockout=ko)
         totals["poly_model"] += poly_pts
+        counts["poly_model"] += 1
 
         # --- Strategies 2 & 3: require a matching Codere row ---
         codere_pred = cexact_pred = None
@@ -92,23 +94,31 @@ def compare() -> tuple[list[MatchComparison], dict[str, int]]:
         cr = cod_by_id.get(r["match_id"])
         if cr is not None:
             if pd.notna(cr.get("p_home")):
+                s = cr["p_home"] + cr["p_draw"] + cr["p_away"]
+                if not 0.95 <= s <= 1.30:
+                    raise ValueError(
+                        f"{r['match_id']}: Codere p_* columns must be implied "
+                        f"probabilities (1/decimal_odds), not decimal odds — "
+                        f"sum={s:.2f}")
                 rc = pick_from_raw(cr["p_home"], cr["p_draw"], cr["p_away"],
                                    ou_line=cr.get("ou_line"), p_over_raw=cr.get("p_over"),
                                    p_under_raw=cr.get("p_under"), knockout=ko)
                 codere_pred = rc.best_pred
                 codere_pts = score_points(codere_pred, actual, knockout=ko)
                 totals["codere_model"] += codere_pts
+                counts["codere_model"] += 1
             if pd.notna(cr.get("cs_pred_home")) and pd.notna(cr.get("cs_pred_away")):
                 cexact_pred = (int(cr["cs_pred_home"]), int(cr["cs_pred_away"]))
                 cexact_pts = score_points(cexact_pred, actual, knockout=ko)
                 totals["codere_exact"] += cexact_pts
+                counts["codere_exact"] += 1
 
         rows.append(MatchComparison(
             match_id=r["match_id"], label=label, actual=actual,
             poly_pred=poly_pred, codere_pred=codere_pred, cexact_pred=cexact_pred,
             poly_pts=poly_pts, codere_pts=codere_pts, cexact_pts=cexact_pts,
         ))
-    return rows, totals
+    return rows, totals, counts
 
 
 def _fmt(pred, pts):
@@ -118,7 +128,7 @@ def _fmt(pred, pts):
 
 
 if __name__ == "__main__":
-    rows, totals = compare()
+    rows, totals, counts = compare()
     if not rows:
         print("No played matches logged yet (fill actual_home / actual_away "
               "in match_odds_polymarket.csv after each match).")
@@ -134,4 +144,4 @@ if __name__ == "__main__":
               f"{totals['poly_model']:>12}{totals['codere_model']:>14}{totals['codere_exact']:>14}")
         print("\nStrategy ranking:")
         for name, pts in sorted(totals.items(), key=lambda x: -x[1]):
-            print(f"  {name:<16} {pts} pts")
+            print(f"  {name:<16} {pts} pts ({counts[name]} matches)")

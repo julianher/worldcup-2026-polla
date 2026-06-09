@@ -31,6 +31,8 @@ ask ¢.**
   record its correct-score pick = the single LOWEST-odds (most likely) scoreline.
   Convert Codere decimal odds to implied probs (1/odds) when filling its
   p_home/p_draw/p_away/p_over/p_under (the model de-vigs them).
+- **Codere champion must always be the FULL 48-team field** — its de-vig requires
+  the complete list; a truncated list silently inflates the favorites.
 
 ## Workflow — MATCHES (repeat for every match, ~104 times)
 
@@ -83,8 +85,14 @@ ask ¢.**
    `{team: prob}` dicts from the Polymarket CSV, call
    `derive_podium_probs(champion, reach_final, reach_semis, value_type="prob")`,
    then `rank_podiums(probs)`. The pick is rank #1 (champion / runner-up / third).
+   - **Champion tie rule:** if the top two teams are within noise at capture time,
+     the higher one-decimal headline % is champion, period — no discretion. Record
+     both prices in notes.
 4. Give the user the podium to submit in Pasión de Gol (Polymarket only).
 5. File screenshots to `data/screenshots/`, commit + push.
+6. **After the real June 10 push, create a GitHub Release tagged
+   `picks-2026-06-10`** — release timestamps are server-generated, making the
+   locked-before-kickoff claim independently verifiable.
 
 ## Determinism / anti-hallucination checklist
 
