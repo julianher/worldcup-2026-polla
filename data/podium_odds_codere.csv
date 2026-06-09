@@ -7,6 +7,10 @@ capture_datetime,market,team,decimal_odds,notes
 2026-06-08T20:10:00-04:00,champion,Portugal,9.00,REHEARSAL
 2026-06-08T20:10:00-04:00,champion,Germany,15.00,REHEARSAL
 2026-06-08T20:10:00-04:00,champion,Netherlands,19.00,REHEARSAL
+2026-06-08T20:10:00-04:00,champion,Norway,27.00,REHEARSAL
+2026-06-08T20:10:00-04:00,champion,Belgium,35.00,REHEARSAL
+2026-06-08T20:10:00-04:00,champion,Colombia,35.00,REHEARSAL
+2026-06-08T20:10:00-04:00,champion,Morocco,50.00,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_final,Spain,3.25,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_final,France,3.75,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_final,England,4.00,REHEARSAL
@@ -15,6 +19,10 @@ capture_datetime,market,team,decimal_odds,notes
 2026-06-08T20:10:00-04:00,reach_final,Portugal,5.50,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_final,Germany,6.00,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_final,Netherlands,9.00,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_final,Norway,11.00,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_final,Belgium,15.00,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_final,Colombia,15.00,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_final,Morocco,23.00,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_semis,Spain,2.25,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_semis,France,2.50,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_semis,England,2.75,REHEARSAL
@@ -23,3 +31,7 @@ capture_datetime,market,team,decimal_odds,notes
 2026-06-08T20:10:00-04:00,reach_semis,Portugal,3.50,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_semis,Germany,3.75,REHEARSAL
 2026-06-08T20:10:00-04:00,reach_semis,Netherlands,4.75,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_semis,Norway,5.00,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_semis,Belgium,6.50,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_semis,Colombia,7.00,REHEARSAL
+2026-06-08T20:10:00-04:00,reach_semis,Morocco,10.00,REHEARSAL
