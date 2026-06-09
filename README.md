@@ -84,15 +84,35 @@ CSV rows.
 worldcup-2026-polla/
 ├── README.md
 ├── data/
-│   ├── match_odds_log.csv      # append-only raw captures (1X2 + O/U per match)
-│   ├── podium_odds_log.csv     # futures snapshot (day-before-opener)
-│   └── screenshots/            # visual backups of each capture
+│   ├── match_odds_polymarket.csv   # PRIMARY: 1X2 + O/U per match, with volume + timestamps + results
+│   ├── match_odds_codere.csv       # SHADOW: Codere 1X2 + O/U + Codere's exact-score market pick
+│   ├── podium_odds_polymarket.csv  # PRIMARY: champion/reach-final/reach-semis probabilities + volume
+│   ├── podium_odds_codere.csv      # SHADOW: same three markets as decimal odds
+│   └── screenshots/                # visual backups of each capture
 ├── src/
-│   └── polla_model.py          # engine: odds -> probabilities -> optimal scoreline
+│   ├── polla_model.py          # engine: odds -> probabilities -> optimal scoreline
+│   ├── podium_model.py         # podium: futures (prob OR decimal) -> champion/runner-up/third
+│   └── compare_strategies.py   # scores the 3 strategies against results -> pool comparison
 ├── notebooks/
 │   └── bitacora.ipynb          # the deliverable: methodology + live logbook
 └── outputs/                    # figures and computed results
 ```
+
+## Three strategies, one comparison
+
+Every pick is recorded under a uniform Polymarket-primary methodology, but two
+sources and three strategies are scored in parallel so the project can answer,
+empirically, which approach would have placed best in the 250-person pool:
+
+1. **poly_model** — the engine fed by Polymarket 1X2 + over/under (the picks
+   actually submitted). Primary, applied identically every match.
+2. **codere_model** — the same engine fed by Codere 1X2 + over/under (shadow).
+3. **codere_exact** — Codere's own correct-score market read directly, no model.
+
+`compare_strategies.py` scores all three against the real 90' results and reports
+the standings. Volume is logged per market (Polymarket only — exchanges publish it,
+traditional books don't), which also lets the logbook test whether picks on deeper
+markets scored better.
 
 ## Engine quickstart
 

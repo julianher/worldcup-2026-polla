@@ -85,34 +85,59 @@ class PodiumProbs:
     third: dict[str, float]
 
 
-def derive_podium_probs(champion_odds: dict[str, float],
-                        reach_final_odds: dict[str, float],
-                        reach_semis_odds: dict[str, float]) -> PodiumProbs:
+def derive_podium_probs(champion: dict[str, float],
+                        reach_final: dict[str, float],
+                        reach_semis: dict[str, float],
+                        value_type: str = "decimal") -> PodiumProbs:
     """
     ANCHOR METHOD (recommended, robust to partial capture).
 
-    Inputs are DECIMAL ODDS, not probabilities:
-      - champion_odds:    FULL team list (the headline market; easy to capture
-                          in full). De-vigged to P(champion) summing to 1.
-      - reach_final_odds: per-team decimal odds; top ~8 teams is enough.
-      - reach_semis_odds: per-team decimal odds; top ~8 teams is enough.
+    value_type selects the input format, so the SAME function serves both sources:
+      - "decimal" : inputs are decimal odds (Codere), e.g. Spain champion = 5.50
+      - "prob"    : inputs are probabilities (Polymarket), e.g. Spain champion = 0.16
 
-    For each team we scale its champion probability by the odds ratio between
-    markets:
+    Inputs:
+      - champion:    the headline market. For the anchor method to be correct the
+                     champion market should be the FULL team list (it de-vigs to
+                     P(champion) summing to 1). With Polymarket pass probabilities
+                     for the full field; with Codere pass decimal odds for all 48.
+      - reach_final: per-team; top ~8 teams is enough.
+      - reach_semis: per-team; top ~8 teams is enough.
 
-        P(reach final) = P(champion) * (champion_odds / reach_final_odds)
-        P(reach semis) = P(champion) * (champion_odds / reach_semis_odds)
-
-    The per-team odds ratio cancels the (roughly proportional) vig, so this does
-    NOT require the full team list for the reach-final / reach-semis markets and
-    is robust to truncation — unlike normalizing each market to its slot count.
+    For each team we scale its champion probability by the ratio between markets.
+    Working internally in decimal-odds space, that ratio is
+    (champion_odds / reach_final_odds); the per-team ratio cancels the (roughly
+    proportional) vig, so reach-final / reach-semis need NOT be the full list and
+    the method is robust to truncation. With probability inputs we first convert
+    prob -> decimal-equivalent (1/p), after which the identical math applies.
 
     Then:
         P(runner-up) = P(reach final) - P(champion)
         P(third)     = 0.5 * ( P(reach semis) - P(reach final) )
     """
+    # Normalize all inputs to decimal-odds space so the anchor math is identical.
+    def as_odds(d: dict[str, float]) -> dict[str, float]:
+        if value_type == "prob":
+            return {t: (1.0 / p if p > 0 else float("inf")) for t, p in d.items()}
+        if value_type == "decimal":
+            return dict(d)
+        raise ValueError(f"value_type must be 'prob' or 'decimal', got {value_type!r}")
+
+    champion_odds = as_odds(champion)
+    reach_final_odds = as_odds(reach_final)
+    reach_semis_odds = as_odds(reach_semis)
+
     champ_raw = {t: 1.0 / o for t, o in champion_odds.items()}
-    p_champ = normalize_to(1.0, champ_raw, "champion")
+    if value_type == "prob":
+        # Polymarket prices are ALREADY de-vigged probabilities. Re-normalizing a
+        # (possibly truncated) list to sum to 1 would redistribute the missing
+        # tail onto the top teams and inflate them — so use the probabilities
+        # directly. The small residual spread-vig is negligible vs that error.
+        p_champ = dict(champ_raw)
+    else:
+        # Decimal odds carry the full bookmaker vig; de-vig by normalizing to the
+        # one-champion slot count (requires the full team list; guard warns if not).
+        p_champ = normalize_to(1.0, champ_raw, "champion")
 
     runner_up, third = {}, {}
     for t, pc in p_champ.items():
