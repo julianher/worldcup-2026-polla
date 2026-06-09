@@ -76,7 +76,35 @@ credible. Two recurring captures:
   (Capture ~1h before kickoff only for matches with a real lineup question.)
 
 Screenshots are saved under `data/screenshots/` as visual backups alongside the
-CSV rows.
+CSV rows. The capture inbox is `Images/`: new screenshots are dropped there, and
+once their numbers are transcribed into the CSVs they are moved to
+`data/screenshots/` (with dated, sourced names). The move is the signal that a
+capture has been processed.
+
+### Reading Polymarket prices (the capture rule)
+
+Polymarket trades YES/NO shares that settle at $1 / $0, so a share price in cents
+*is* an implied probability (a 16¢ share = 16%). Each market shows a bold
+headline probability — the mid / last price, the unbiased estimate — and a green
+"buy" button showing the **ask**, which sits slightly *above* the true
+probability by the bid-ask spread. That spread is negligible on liquid markets
+and widens on thin ones, so the ask overstates probability exactly where volume
+is thin.
+
+**Rule — record the headline probability (the mid), never the buy-¢ (the ask):**
+
+- **champion** — use the one-decimal headline (e.g. France 16.2%, Spain 16.0%).
+  Integer rounding would collapse that 0.2% gap, which decides who is champion.
+- **reach_final / reach_semis** — use the integer headline % (e.g. Spain 0.44),
+  not the inflated ask price.
+
+Polymarket probabilities are entered into `podium_odds_polymarket.csv` as-is and
+fed to the model with `value_type="prob"`; they are **not** renormalized to sum
+to 1, because the field is captured incompletely (top teams only) and rescaling
+would push the missing tail's weight onto the favorites and inflate them. Codere
+is the mirror image: decimal odds recorded exactly as captured and de-vigged by
+the model (Shin), with its correct-score pick taken as the single lowest-odds
+(most likely) scoreline.
 
 ## Repository layout
 
