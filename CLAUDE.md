@@ -65,6 +65,14 @@ ask ¢.**
 9. **Commit + push** with an honest pre-game message, e.g.
    `Picks locked before kickoff — <match(es)> <date>`. The push timestamp is the
    proof the pick preceded the match.
+10. **Tag + GitHub Release per pick-lock day**: create annotated tag
+    `picks-YYYY-MM-DD`, push it, then create a Release from it — the release's
+    server-generated timestamp makes the locked-before-kickoff claim
+    independently verifiable. Tooling: `gh` binary at `~/.local/bin/gh`, token at
+    `~/.config/polla/gh_token` (repo scope only); invoke as
+    `GH_TOKEN=$(cat ~/.config/polla/gh_token) ~/.local/bin/gh release create ...`.
+    (`gh auth login` rejects this token for lacking read:org — always use the
+    GH_TOKEN env var instead.)
 
 ### After matches are played (results)
 - Fill `actual_home` / `actual_away` in `data/match_odds_polymarket.csv`.
