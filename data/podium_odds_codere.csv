@@ -1,73 +1,77 @@
 capture_datetime,market,team,decimal_odds,notes
-2026-06-08T20:10:00-04:00,champion,Spain,5.50,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,France,6.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,England,7.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Argentina,9.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Brazil,9.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Portugal,9.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Germany,15.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Netherlands,19.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Norway,27.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Belgium,35.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Colombia,35.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Morocco,50.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Japan,50.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,USA,65.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Mexico,65.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Uruguay,65.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Switzerland,75.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Croatia,80.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Turkey,80.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Ecuador,100.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Sweden,120.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Senegal,125.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Austria,150.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Canada,160.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Paraguay,160.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Saudi Arabia,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Algeria,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Australia,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Bosnia and Herzegovina,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Cape Verde,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Qatar,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Korea Republic,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Ivory Coast,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Curacao,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Egypt,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Scotland,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Ghana,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Haiti,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Iraq,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Iran,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Jordan,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,New Zealand,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Panama,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,DR Congo,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Czechia,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,South Africa,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Tunisia,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,champion,Uzbekistan,250.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Spain,3.25,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,France,3.75,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,England,4.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Argentina,5.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Brazil,5.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Portugal,5.50,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Germany,6.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Netherlands,9.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Norway,11.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Belgium,15.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Colombia,15.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_final,Morocco,23.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Spain,2.25,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,France,2.50,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,England,2.75,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Argentina,3.25,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Brazil,3.25,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Portugal,3.50,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Germany,3.75,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Netherlands,4.75,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Norway,5.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Belgium,6.50,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Colombia,7.00,REHEARSAL
-2026-06-08T20:10:00-04:00,reach_semis,Morocco,10.00,REHEARSAL
+2026-06-10T20:32:00-04:00,champion,Spain,5.50,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,France,6.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,England,8.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Portugal,8.50,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Brazil,9.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Argentina,10.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Germany,15.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Netherlands,20.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Norway,27.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Belgium,35.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Colombia,35.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Japan,50.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Morocco,50.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,USA,65.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Mexico,65.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Uruguay,65.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Croatia,80.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Ecuador,80.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Switzerland,80.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Turkey,80.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Senegal,120.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Canada,125.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Sweden,125.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Austria,150.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Paraguay,160.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Scotland,250.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Ivory Coast,275.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Egypt,300.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Czechia,300.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Algeria,350.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Bosnia and Herzegovina,350.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Korea Republic,350.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Ghana,400.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Saudi Arabia,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Australia,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Cape Verde,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Qatar,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Curacao,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Haiti,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Iraq,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Iran,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Jordan,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,New Zealand,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Panama,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,DR Congo,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,South Africa,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Tunisia,500.00,Opening-day shadow
+2026-06-10T20:32:00-04:00,champion,Uzbekistan,500.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Spain,3.25,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,France,3.75,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,England,4.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Argentina,5.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Brazil,5.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Portugal,5.50,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Germany,6.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Netherlands,9.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Norway,11.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Belgium,15.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Colombia,15.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Japan,23.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Morocco,23.00,Opening-day shadow
+2026-06-10T20:34:00-04:00,reach_final,Mexico,27.00,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Spain,2.25,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,France,2.35,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,England,2.75,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Argentina,3.25,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Brazil,3.25,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Portugal,3.25,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Germany,3.75,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Netherlands,4.75,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Norway,5.00,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Belgium,6.50,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Colombia,7.00,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Japan,10.00,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Morocco,10.00,Opening-day shadow
+2026-06-10T20:36:00-04:00,reach_semis,Mexico,12.00,Opening-day shadow

@@ -1,37 +1,43 @@
 capture_datetime,market,team,prob,volume_usd,notes
-2026-06-08T20:00:00-04:00,champion,France,0.162,39752398,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Spain,0.160,32256768,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,England,0.110,27964851,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Portugal,0.099,33907913,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Argentina,0.085,29318474,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Brazil,0.084,29866482,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Germany,0.054,30602933,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Netherlands,0.040,33724506,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Norway,0.026,34130030,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Belgium,0.023,35430826,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Colombia,0.020,34548330,REHEARSAL
-2026-06-08T20:00:00-04:00,champion,Morocco,0.020,40037046,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Spain,0.29,15492,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,France,0.28,17980,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,England,0.23,19637,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Argentina,0.19,3813,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Portugal,0.19,27629,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Brazil,0.18,12531,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Germany,0.13,3106,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Netherlands,0.10,13688,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Norway,0.07,15935,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Belgium,0.07,8387,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Morocco,0.06,22062,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_final,Colombia,0.05,6055,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Spain,0.44,6110,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,France,0.43,6949,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,England,0.36,16344,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Argentina,0.32,23561,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Brazil,0.32,2646,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Portugal,0.32,4046,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Germany,0.24,1092,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Netherlands,0.22,934,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Norway,0.16,7504,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Belgium,0.16,71,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Colombia,0.16,57,REHEARSAL
-2026-06-08T20:00:00-04:00,reach_semis,Morocco,0.12,3619,REHEARSAL
+2026-06-10T20:27:00-04:00,champion,Spain,0.164,36536830,Opening-day capture; legend one-decimal Spain 16.4 vs France 16.1 (tie rule)
+2026-06-10T20:27:00-04:00,champion,France,0.161,43297165,Opening-day capture; legend one-decimal Spain 16.4 vs France 16.1 (tie rule)
+2026-06-10T20:27:00-04:00,champion,England,0.108,31916415,Opening-day capture; legend one-decimal
+2026-06-10T20:27:00-04:00,champion,Portugal,0.105,38135923,Opening-day capture; legend one-decimal
+2026-06-10T20:27:00-04:00,champion,Argentina,0.09,33920732,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Brazil,0.08,33489732,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Germany,0.05,35203239,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Netherlands,0.04,37382009,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Norway,0.02,36702608,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Belgium,0.02,38963316,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Colombia,0.02,39099585,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Japan,0.02,39431383,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Morocco,0.02,43068697,Opening-day capture
+2026-06-10T20:27:00-04:00,champion,Mexico,0.01,43027681,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Spain,0.29,25033,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,France,0.29,19848,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,England,0.23,28509,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Brazil,0.20,19570,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Argentina,0.20,7849,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Portugal,0.19,32193,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Germany,0.13,3306,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Netherlands,0.10,18304,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Norway,0.08,34134,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Belgium,0.07,12888,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Colombia,0.06,8284,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Mexico,0.06,38855,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Morocco,0.05,29011,Opening-day capture
+2026-06-10T20:26:00-04:00,reach_final,Japan,0.05,13657,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Spain,0.45,17417,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,France,0.42,8072,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,England,0.35,20700,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Argentina,0.32,24440,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Brazil,0.30,3551,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Portugal,0.30,5890,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Germany,0.21,2027,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Netherlands,0.21,1344,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Norway,0.16,8412,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Belgium,0.16,184,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Colombia,0.16,675,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Japan,0.11,9525,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Mexico,0.11,4348,Opening-day capture
+2026-06-10T20:30:00-04:00,reach_semis,Morocco,0.10,5958,Opening-day capture
