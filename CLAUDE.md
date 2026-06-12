@@ -80,6 +80,9 @@ ask ¢.**
 
 ### After matches are played (results)
 - Fill `actual_home` / `actual_away` in `data/match_odds_polymarket.csv`.
+- When the user reports their pool standing, append a row to
+  `data/pool_standings.csv` (`date,total_players,position,notes`) — it is a
+  time series of position in the 641-player pool.
 - Commit + push (e.g. `Results: <date>`).
 - Run `python src/compare_strategies.py` to score poly_model vs codere_model vs
   codere_exact once results have accumulated.
