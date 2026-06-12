@@ -1,7 +1,9 @@
 # Market-Implied Probabilities Applied to a World Cup Prediction Pool
 
 A decision-science logbook (*bitácora*) for the 2026 FIFA World Cup pool ("polla")
-run at Coempopular — **250 participants, one custom scoring rule.**
+run at Coempopular — **~650 participants (641 at the opener; registration may
+still move slightly — exact count per date in `data/pool_standings.csv`), one
+custom scoring rule.**
 
 ## Thesis
 
@@ -29,7 +31,7 @@ information:
    *not* the most likely scoreline — so there is room to optimize on top of the
    market's probabilities.
 
-The logbook is judged on **decision quality, not outcome.** Winning a 250-person
+The logbook is judged on **decision quality, not outcome.** Winning a ~650-person
 pool is improbable for anyone in a single tournament (variance dominates a single
 run). The value here is a documented, reproducible decision process — whether it
 wins or not.
@@ -130,7 +132,7 @@ worldcup-2026-polla/
 
 Every pick is recorded under a uniform Polymarket-primary methodology, but two
 sources and three strategies are scored in parallel so the project can answer,
-empirically, which approach would have placed best in the 250-person pool:
+empirically, which approach would have placed best in the pool:
 
 1. **poly_model** — the engine fed by Polymarket 1X2 + over/under (the picks
    actually submitted). Primary, applied identically every match.
