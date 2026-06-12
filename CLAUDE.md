@@ -31,6 +31,10 @@ ask ¢.**
 - **reach_final / reach_semis**: use the integer headline % (e.g. Spain 44% -> 0.44).
 - **Codere**: record decimal odds exactly as shown. For each Codere match also
   record its correct-score pick = the single LOWEST-odds (most likely) scoreline.
+  **cs tie-break:** if two scorelines share the lowest odds, take the one whose
+  1X2 outcome is more likely per Codere's own 1X2 (e.g. favorite's 1:0 over a
+  1:1 draw when the favorite's win is priced shorter than the draw). Note the
+  tie in the notes column.
   Convert Codere decimal odds to implied probs (1/odds) when filling its
   p_home/p_draw/p_away/p_over/p_under (the model de-vigs them).
 - **Codere champion must always be the FULL 48-team field** — its de-vig requires

@@ -1,3 +1,5 @@
 capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw,p_away,ou_line,p_over,p_under,cs_pred_home,cs_pred_away,cs_pred_odds,notes
 2026-06-10T20:47:00-04:00,2026-06-11T15:00:00-04:00,group,A1-MEX-RSA,Mexico,South Africa,0.6993,0.2353,0.1000,2.5,0.4444,0.5988,1,0,4.50,Opening-day shadow (1=1.43 X=4.25 2=10; O2.5=2.25 U2.5=1.67; cs 1:0@4.50 captured 21:02)
 2026-06-10T20:47:00-04:00,2026-06-11T22:00:00-04:00,group,A2-KOR-CZE,Korea Republic,Czechia,0.3846,0.3125,0.3509,2.5,0.4545,0.6173,1,1,5.25,Opening-day shadow (1=2.60 X=3.20 2=2.85; O2.5=2.20 U2.5=1.62; cs 1:1@5.25 captured 21:03)
+2026-06-12T00:17:25-04:00,2026-06-12T15:00:00-04:00,group,B1-CAN-BIH,Canada,Bosnia and Herzegovina,0.5263,0.2899,0.2273,2.5,0.4444,0.5882,1,0,5.75,Matchday-2 shadow (1=1.90 X=3.45 2=4.40; O2.5=2.25 U2.5=1.70; cs TIE 1:0 and 1:1 both @5.75 — took 1:0 per favorite-outcome tie-break)
+2026-06-12T00:18:31-04:00,2026-06-12T21:00:00-04:00,group,D1-USA-PAR,USA,Paraguay,0.5128,0.2941,0.2273,2.5,0.4348,0.6061,1,0,5.75,Matchday-2 shadow (1=1.95 X=3.40 2=4.40; O2.5=2.30 U2.5=1.65; cs TIE 1:0 and 1:1 both @5.75 — took 1:0 per favorite-outcome tie-break)
