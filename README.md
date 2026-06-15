@@ -27,7 +27,7 @@ information:
    betting translates directly into points here.
 2. **A scoring rule the market does not optimize for.** The pool rewards points
    on a 5/2/2/1 structure (result type / exact home goals / exact away goals /
-   goal difference), not profit. The point-maximizing scoreline is generally
+   goal-difference margin — sign-agnostic), not profit. The point-maximizing scoreline is generally
    *not* the most likely scoreline — so there is room to optimize on top of the
    market's probabilities.
 

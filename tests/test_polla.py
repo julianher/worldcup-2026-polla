@@ -44,13 +44,19 @@ def test_scoring_rule():
         ((1, 1), (1, 1), False, 10),  # exact score: all four components
         ((2, 0), (2, 1), False, 7),   # result + home goals
         ((1, 0), (2, 1), True, 12),   # knockout doubles the 6
+        # goal difference is ABSOLUTE (margin), sign-agnostic: predicting a
+        # 1-goal margin the wrong way still earns the goal-diff point.
+        ((0, 1), (1, 0), False, 1),   # pred away by 1, actual home by 1 -> goal-diff only
+        ((2, 0), (0, 2), False, 1),   # pred home by 2, actual away by 2 -> goal-diff only
+        ((1, 0), (0, 1), True, 2),    # same, knockout doubles the 1
     ]
     for pred, actual, ko, expected in cases:
         got = score_points(pred, actual, knockout=ko)
         assert got == expected, (
             f"score_points({pred}, {actual}, knockout={ko}) = {got}, "
             f"expected {expected}")
-    print("  [1] scoring rule: 5 hand-verified cases pass")
+    print(f"  [1] scoring rule: {len(cases)} hand-verified cases pass "
+          f"(incl. absolute goal-difference)")
 
 
 def _write(path, header, rows):

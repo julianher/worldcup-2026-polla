@@ -21,8 +21,13 @@ Per match, the four components are independent and additive:
     - correct result type (1X2)         : 5 pts (group)  / 10 pts (knockout)
     - correct home goals (exact)        : 2 pts (group)  /  4 pts (knockout)
     - correct away goals (exact)        : 2 pts (group)  /  4 pts (knockout)
-    - correct goal difference           : 1 pt  (group)  /  2 pts (knockout)
+    - correct goal difference (margin)  : 1 pt  (group)  /  2 pts (knockout)
 Maximum 10 pts (group) / 20 pts (knockout). A nailed exact score gives all four.
+
+The goal-difference component is the ABSOLUTE margin (sign-agnostic): predicting a
+1-goal margin earns the point on any 1-goal result, even if the wrong team wins
+(e.g. predicting 0-1 scores the goal-diff point on a 1-0 result). This matches the
+Pasion de Gol platform's scoring.
 
 Only 90' + referee stoppage time counts (no extra time, no penalties).
 
@@ -221,7 +226,7 @@ def score_points(pred: tuple[int, int], actual: tuple[int, int],
         pts += 2
     if pa == aa:                   # correct away goals
         pts += 2
-    if (ph - pa) == (ah - aa):     # correct goal difference
+    if abs(ph - pa) == abs(ah - aa):  # correct goal difference (absolute margin)
         pts += 1
     return pts * mult
 
