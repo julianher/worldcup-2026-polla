@@ -15,9 +15,9 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-06-15T02:32:41-04:00,2026-06-15T15:00:00-04:00,group,G1-BEL-EGY,Belgium,Egypt,0.62,0.24,0.16,737000,2.5,0.49,0.52,88100,1,0,1,1,Matchday-5 pick locked (Belgium 1-0); result 1-1 (draw)
 2026-06-15T02:33:10-04:00,2026-06-15T18:00:00-04:00,group,H2-KSA-URU,Saudi Arabia,Uruguay,0.12,0.23,0.66,753000,2.5,0.46,0.55,48800,0,1,1,1,Matchday-5 pick locked (Uruguay 1-0); result 1-1 (draw)
 2026-06-15T02:33:37-04:00,2026-06-15T21:00:00-04:00,group,G2-IRN-NZL,Iran,New Zealand,0.51,0.29,0.22,717000,2.5,0.39,0.62,47600,1,0,2,2,Matchday-5 pick locked (Iran 1-0); result 2-2 (draw)
-2026-06-15T16:48:11-04:00,2026-06-16T15:00:00-04:00,group,I1-FRA-SEN,France,Senegal,0.67,0.22,0.13,1400000,2.5,0.51,0.50,105000,1,0,,,Matchday-6 pick locked (France 1-0)
-2026-06-15T16:48:49-04:00,2026-06-16T18:00:00-04:00,group,I2-IRQ-NOR,Iraq,Norway,0.06,0.13,0.83,381000,3.5,0.39,0.62,120000,0,2,,,Matchday-6 pick locked (Norway 2-0); O/U line 3.5
-2026-06-15T16:49:20-04:00,2026-06-16T21:00:00-04:00,group,J1-ARG-ALG,Argentina,Algeria,0.71,0.21,0.10,576000,2.5,0.49,0.52,33700,1,0,,,Matchday-6 pick locked (Argentina 1-0)
+2026-06-15T16:48:11-04:00,2026-06-16T15:00:00-04:00,group,I1-FRA-SEN,France,Senegal,0.67,0.22,0.13,1400000,2.5,0.51,0.50,105000,1,0,3,1,Matchday-6 pick locked (France 1-0); result 3-1
+2026-06-15T16:48:49-04:00,2026-06-16T18:00:00-04:00,group,I2-IRQ-NOR,Iraq,Norway,0.06,0.13,0.83,381000,3.5,0.39,0.62,120000,0,2,1,4,Matchday-6 pick locked (Norway 2-0); O/U line 3.5; result 1-4
+2026-06-15T16:49:20-04:00,2026-06-16T21:00:00-04:00,group,J1-ARG-ALG,Argentina,Algeria,0.71,0.21,0.10,576000,2.5,0.49,0.52,33700,1,0,3,0,Matchday-6 pick locked (Argentina 1-0); result 3-0
 2026-06-15T16:49:48-04:00,2026-06-17T00:00:00-04:00,group,J2-AUT-JOR,Austria,Jordan,0.73,0.18,0.11,190000,2.5,0.57,0.44,104000,2,0,,,Matchday-6 pick locked (Austria 2-0; 2-0/1-0 EV tie)
 2026-06-16T23:03:26-04:00,2026-06-17T13:00:00-04:00,group,K1-POR-COD,Portugal,DR Congo,0.76,0.18,0.08,987000,2.5,0.53,0.48,122000,2,0,,,Matchday-7 pick locked (Portugal 2-0; 2-0/1-0 EV near-tie)
 2026-06-16T23:50:24-04:00,2026-06-17T16:00:00-04:00,group,L1-ENG-CRO,England,Croatia,0.57,0.26,0.19,556000,2.5,0.44,0.57,118000,1,0,,,Matchday-7 pick locked (England 1-0)
