@@ -23,3 +23,7 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-06-16T23:50:24-04:00,2026-06-17T16:00:00-04:00,group,L1-ENG-CRO,England,Croatia,0.57,0.26,0.19,556000,2.5,0.44,0.57,118000,1,0,,,Matchday-7 pick locked (England 1-0)
 2026-06-16T23:50:58-04:00,2026-06-17T19:00:00-04:00,group,L2-GHA-PAN,Ghana,Panama,0.43,0.30,0.29,394000,2.5,0.41,0.60,33000,1,0,,,Matchday-7 pick locked (Ghana 1-0; most even match yet still favored; Codere cs picks 1-1 draw)
 2026-06-16T23:51:28-04:00,2026-06-17T22:00:00-04:00,group,K2-UZB-COL,Uzbekistan,Colombia,0.10,0.20,0.72,236000,2.5,0.50,0.51,39100,0,1,,,Matchday-7 pick locked (Colombia 1-0)
+2026-06-17T22:59:54-04:00,2026-06-18T12:00:00-04:00,group,A3-CZE-RSA,Czechia,South Africa,0.53,0.27,0.21,2500000,2.5,0.46,0.55,492000,1,0,,,Matchday-8 pick locked (Czechia 1-0)
+2026-06-17T23:00:31-04:00,2026-06-18T15:00:00-04:00,group,B3-CHE-BIH,Switzerland,Bosnia and Herzegovina,0.63,0.24,0.15,296000,2.5,0.48,0.53,63400,1,0,,,Matchday-8 pick locked (Switzerland 1-0)
+2026-06-17T23:01:00-04:00,2026-06-18T18:00:00-04:00,group,B4-CAN-QAT,Canada,Qatar,0.77,0.17,0.08,716000,2.5,0.57,0.44,70900,2,0,,,Matchday-8 pick locked (Canada 2-0)
+2026-06-17T23:01:21-04:00,2026-06-18T21:00:00-04:00,group,A4-MEX-KOR,Mexico,Korea Republic,0.48,0.29,0.24,912000,2.5,0.41,0.60,53700,1,0,,,Matchday-8 pick locked (Mexico 1-0; even match; Codere cs picks 1-1 draw)
