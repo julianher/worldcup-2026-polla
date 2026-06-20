@@ -31,3 +31,7 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-06-18T20:15:14-04:00,2026-06-19T18:00:00-04:00,group,C3-SCO-MAR,Scotland,Morocco,0.18,0.27,0.56,563000,2.5,0.42,0.59,35600,0,1,,,Matchday-9 pick locked (Morocco 1-0)
 2026-06-18T20:15:43-04:00,2026-06-19T20:30:00-04:00,group,C4-BRA-HAI,Brazil,Haiti,0.88,0.085,0.039,877000,3.5,0.53,0.48,168000,3,0,,,Matchday-9 pick locked (Brazil 3-0); O/U line 3.5
 2026-06-18T20:17:15-04:00,2026-06-19T23:00:00-04:00,group,D4-TUR-PAR,Turkey,Paraguay,0.48,0.29,0.25,374000,2.5,0.46,0.55,22000,1,0,,,Matchday-9 pick locked (Turkey 1-0; even match; Codere cs picks 1-1 draw)
+2026-06-20T01:10:30-04:00,2026-06-20T13:00:00-04:00,group,F3-NED-SWE,Netherlands,Sweden,0.58,0.24,0.20,1200000,2.5,0.59,0.42,567000,2,1,,,Matchday-10 pick locked (Netherlands 2-1; first 2-1 pick; high-scoring; Codere cs 1-1)
+2026-06-20T01:11:24-04:00,2026-06-20T16:00:00-04:00,group,E3-GER-CIV,Germany,Ivory Coast,0.65,0.21,0.16,896000,2.5,0.62,0.39,178000,2,1,,,Matchday-10 pick locked (Germany 2-1; Codere cs 1-1)
+2026-06-20T01:11:50-04:00,2026-06-20T20:00:00-04:00,group,E4-ECU-CUR,Ecuador,Curacao,0.88,0.10,0.041,1000000,3.5,0.39,0.62,48100,2,0,,,Matchday-10 pick locked (Ecuador 2-0); O/U line 3.5
+2026-06-20T01:12:23-04:00,2026-06-21T00:00:00-04:00,group,F4-TUN-JPN,Tunisia,Japan,0.15,0.24,0.63,567000,2.5,0.46,0.55,23100,0,1,,,Matchday-10 pick locked (Japan 1-0)
