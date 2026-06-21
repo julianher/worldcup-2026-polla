@@ -35,3 +35,7 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-06-20T01:11:24-04:00,2026-06-20T16:00:00-04:00,group,E3-GER-CIV,Germany,Ivory Coast,0.65,0.21,0.16,896000,2.5,0.62,0.39,178000,2,1,,,Matchday-10 pick locked (Germany 2-1; Codere cs 1-1)
 2026-06-20T01:11:50-04:00,2026-06-20T20:00:00-04:00,group,E4-ECU-CUR,Ecuador,Curacao,0.88,0.10,0.041,1000000,3.5,0.39,0.62,48100,2,0,,,Matchday-10 pick locked (Ecuador 2-0); O/U line 3.5
 2026-06-20T01:12:23-04:00,2026-06-21T00:00:00-04:00,group,F4-TUN-JPN,Tunisia,Japan,0.15,0.24,0.63,567000,2.5,0.46,0.55,23100,0,1,,,Matchday-10 pick locked (Japan 1-0)
+2026-06-20T22:10:55-04:00,2026-06-21T12:00:00-04:00,group,H3-ESP-KSA,Spain,Saudi Arabia,0.89,0.09,0.035,1400000,3.5,0.44,0.57,134000,2,0,,,Matchday-11 pick locked (Spain 2-0); O/U line 3.5
+2026-06-20T22:11:28-04:00,2026-06-21T15:00:00-04:00,group,G3-BEL-IRN,Belgium,Iran,0.68,0.21,0.12,359000,2.5,0.54,0.47,133000,1,0,,,Matchday-11 pick locked (Belgium 1-0)
+2026-06-20T22:11:59-04:00,2026-06-21T18:00:00-04:00,group,H4-URU-CPV,Uruguay,Cape Verde,0.68,0.23,0.11,400000,2.5,0.42,0.59,273000,1,0,,,Matchday-11 pick locked (Uruguay 1-0)
+2026-06-20T22:12:23-04:00,2026-06-21T21:00:00-04:00,group,G4-NZL-EGY,New Zealand,Egypt,0.17,0.24,0.61,182000,2.5,0.46,0.55,16900,0,1,,,Matchday-11 pick locked (Egypt 1-0)
