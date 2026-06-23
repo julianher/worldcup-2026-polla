@@ -43,3 +43,7 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-06-21T22:33:00-04:00,2026-06-22T17:00:00-04:00,group,I3-FRA-IRQ,France,Iraq,0.91,0.08,0.027,1200000,3.5,0.51,0.50,241000,3,0,,,Matchday-12 pick locked (France 3-0); O/U line 3.5
 2026-06-21T22:33:30-04:00,2026-06-22T20:00:00-04:00,group,I4-NOR-SEN,Norway,Senegal,0.43,0.28,0.30,1300000,2.5,0.50,0.51,195000,1,0,,,Matchday-12 pick locked (Norway 1-0)
 2026-06-21T22:34:00-04:00,2026-06-22T23:00:00-04:00,group,J4-JOR-ALG,Jordan,Algeria,0.16,0.23,0.63,351000,2.5,0.50,0.51,32000,0,1,,,Matchday-12 pick locked (Algeria 1-0 away)
+2026-06-22T20:57:00-04:00,2026-06-23T13:00:00-04:00,group,K3-POR-UZB,Portugal,Uzbekistan,0.83,0.13,0.05,568000,3.5,0.39,0.62,449000,2,0,,,Matchday-13 pick locked (Portugal 2-0); O/U line 3.5
+2026-06-22T20:58:00-04:00,2026-06-23T16:00:00-04:00,group,L3-ENG-GHA,England,Ghana,0.81,0.14,0.07,966000,2.5,0.60,0.41,37800,2,0,,,Matchday-13 pick locked (England 2-0)
+2026-06-22T20:58:30-04:00,2026-06-23T19:00:00-04:00,group,L4-PAN-CRO,Panama,Croatia,0.13,0.23,0.65,314000,2.5,0.55,0.46,353000,0,1,,,Matchday-13 pick locked (Croatia 1-0 away)
+2026-06-22T20:59:00-04:00,2026-06-23T22:00:00-04:00,group,K4-COL-COD,Colombia,DR Congo,0.64,0.24,0.14,232000,2.5,0.42,0.59,22300,1,0,,,Matchday-13 pick locked (Colombia 1-0)
