@@ -260,6 +260,11 @@ def optimal_scoreline(mkt: MarketInputs, rho: float = -0.10,
     Full pipeline for one match: solve lambdas, build the DC matrix, and pick
     the scoreline that maximizes expected points under the pool's rule.
     Returns the optimum plus the top alternatives for transparency.
+
+    Tie-break: on an exact EV tie, prefer the more probable scoreline (the
+    mode). EV stays the primary key, so this never overrides a strict winner;
+    it only resolves genuine ties, and among equal-EV picks the modal one has
+    the best shot at the full exact-score bonus at zero EV cost.
     """
     lam_h, lam_a = solve_lambdas(mkt, rho=rho)
     M = score_matrix(lam_h, lam_a, rho=rho)
@@ -270,7 +275,7 @@ def optimal_scoreline(mkt: MarketInputs, rho: float = -0.10,
         for j in range(search_max + 1):
             ev = expected_points((i, j), M, knockout=knockout)
             candidates.append(((i, j), ev, float(M[i, j])))
-    candidates.sort(key=lambda c: -c[1])
+    candidates.sort(key=lambda c: (-c[1], -c[2]))  # EV first, then probability (mode) as tie-break
 
     best_pred, best_ev, _ = candidates[0]
     return ScorelineResult(
