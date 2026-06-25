@@ -53,3 +53,9 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-06-24T11:49:00-04:00,2026-06-24T18:00:00-04:00,group,C6-SCO-BRA,Scotland,Brazil,0.10,0.17,0.75,1900000,2.5,0.54,0.47,320000,0,2,,,Matchday-14 pick locked (Brazil 2-0 away); 0-2 edged 0-1 by a hair
 2026-06-24T11:50:00-04:00,2026-06-24T21:00:00-04:00,group,A5-CZE-MEX,Czechia,Mexico,0.26,0.25,0.51,3600000,2.5,0.47,0.54,168000,0,1,,,Matchday-14 pick locked (Mexico 1-0 away)
 2026-06-24T11:51:00-04:00,2026-06-24T21:00:00-04:00,group,A6-RSA-KOR,South Africa,Korea Republic,0.16,0.24,0.62,1600000,2.5,0.47,0.54,586000,0,1,,,Matchday-14 pick locked (Korea 1-0 away)
+2026-06-24T23:42:00-04:00,2026-06-25T16:00:00-04:00,group,E5-ECU-GER,Ecuador,Germany,0.171,0.183,0.659,5500000,2.5,0.59,0.42,364000,0,1,,,Matchday-15 pick locked (Germany 1-0 away)
+2026-06-24T23:42:30-04:00,2026-06-25T16:00:00-04:00,group,E6-CUR-CIV,Curacao,Ivory Coast,0.047,0.116,0.838,907000,3.5,0.43,0.58,112000,0,2,,,Matchday-15 pick locked (Ivory Coast 2-0 away); O/U line 3.5
+2026-06-24T23:43:00-04:00,2026-06-25T19:00:00-04:00,group,F5-JPN-SWE,Japan,Sweden,0.535,0.262,0.209,2600000,2.5,0.56,0.45,192000,1,0,,,Matchday-15 pick locked (Japan 1-0); 1-0 tied 2-1 at E=4.30
+2026-06-24T23:43:30-04:00,2026-06-25T19:00:00-04:00,group,F6-TUN-NED,Tunisia,Netherlands,0.035,0.09,0.89,1100000,3.5,0.48,0.53,100000,0,2,,,Matchday-15 pick locked (Netherlands 2-0 away); O/U line 3.5; 0-2 tied 0-3
+2026-06-24T23:44:00-04:00,2026-06-25T22:00:00-04:00,group,D5-TUR-USA,Turkey,USA,0.26,0.23,0.52,3700000,2.5,0.58,0.43,150000,1,2,,,Matchday-15 pick locked (USA 2-1 away)
+2026-06-24T23:44:30-04:00,2026-06-25T22:00:00-04:00,group,D6-PAR-AUS,Paraguay,Australia,0.35,0.43,0.24,664000,1.5,0.58,0.43,96600,1,0,,,Matchday-15 pick locked (Paraguay 1-0); draw-favorite match but 1-0 edged 0-0 (3.91 vs 3.81); O/U line 1.5
