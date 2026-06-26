@@ -59,3 +59,9 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-06-24T23:43:30-04:00,2026-06-25T19:00:00-04:00,group,F6-TUN-NED,Tunisia,Netherlands,0.035,0.09,0.89,1100000,3.5,0.48,0.53,100000,0,2,,,Matchday-15 pick locked (Netherlands 2-0 away); O/U line 3.5; 0-2 tied 0-3
 2026-06-24T23:44:00-04:00,2026-06-25T22:00:00-04:00,group,D5-TUR-USA,Turkey,USA,0.26,0.23,0.52,3700000,2.5,0.58,0.43,150000,1,2,,,Matchday-15 pick locked (USA 2-1 away)
 2026-06-24T23:44:30-04:00,2026-06-25T22:00:00-04:00,group,D6-PAR-AUS,Paraguay,Australia,0.35,0.43,0.24,664000,1.5,0.58,0.43,96600,1,0,,,Matchday-15 pick locked (Paraguay 1-0); draw-favorite match but 1-0 edged 0-0 (3.91 vs 3.81); O/U line 1.5
+2026-06-26T10:56:00-04:00,2026-06-26T15:00:00-04:00,group,I5-NOR-FRA,Norway,France,0.20,0.21,0.60,5500000,3.5,0.42,0.59,1500000,1,2,,,Matchday-16 pick locked (France 2-1 away); O/U line 3.5
+2026-06-26T10:57:00-04:00,2026-06-26T15:00:00-04:00,group,I6-SEN-IRQ,Senegal,Iraq,0.80,0.14,0.08,1100000,3.5,0.42,0.59,768000,2,0,,,Matchday-16 pick locked (Senegal 2-0); O/U line 3.5
+2026-06-26T10:57:30-04:00,2026-06-26T20:00:00-04:00,group,H5-URU-ESP,Uruguay,Spain,0.16,0.27,0.58,3100000,2.5,0.43,0.58,438000,0,1,,,Matchday-16 pick locked (Spain 1-0 away)
+2026-06-26T10:58:00-04:00,2026-06-26T20:00:00-04:00,group,H6-CPV-KSA,Cape Verde,Saudi Arabia,0.37,0.29,0.36,2500000,2.5,0.45,0.56,138000,1,0,,,Matchday-16 pick locked (Cape Verde 1-0); coin-flip match highest leverage
+2026-06-26T10:58:30-04:00,2026-06-26T23:00:00-04:00,group,G5-EGY-IRN,Egypt,Iran,0.40,0.38,0.25,1800000,1.5,0.62,0.39,296000,1,0,,,Matchday-16 pick locked (Egypt 1-0); draw 38pct close but Egypt favored 1-0 over 0-0 (4.01 vs 3.52); O/U line 1.5
+2026-06-26T10:59:00-04:00,2026-06-26T23:00:00-04:00,group,G6-NZL-BEL,New Zealand,Belgium,0.07,0.12,0.83,793000,3.5,0.55,0.46,774000,0,2,,,Matchday-16 pick locked (Belgium 2-0 away); O/U line 3.5
