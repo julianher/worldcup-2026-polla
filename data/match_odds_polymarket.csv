@@ -87,3 +87,5 @@ capture_datetime,match_datetime,stage,match_id,home_team,away_team,p_home,p_draw
 2026-07-02T22:34:00-04:00,2026-07-03T14:00:00-04:00,R32,R32-AUS-EGY,Australia,Egypt,0.28,0.34,0.39,382000,1.5,0.61,0.40,434000,0,1,,,Round of 32 KNOCKOUT x2 pick locked (Egypt 1-0 away); near-even draw-heavy but Egypt edge 0-1 over 0-0 (7.79 vs 6.99); O/U line 1.5
 2026-07-02T22:34:30-04:00,2026-07-03T18:00:00-04:00,R32,R32-ARG-CPV,Argentina,Cape Verde,0.86,0.11,0.04,3000000,2.5,0.60,0.41,228000,2,0,,,Round of 32 KNOCKOUT x2 pick locked (Argentina 2-0); 2-0 edged 3-0 12.76 vs 12.58
 2026-07-02T22:35:00-04:00,2026-07-03T21:30:00-04:00,R32,R32-COL-GHA,Colombia,Ghana,0.68,0.23,0.11,632000,2.5,0.45,0.56,185000,1,0,,,Round of 32 KNOCKOUT x2 pick locked (Colombia 1-0)
+2026-07-03T23:59:00-04:00,2026-07-04T13:00:00-04:00,R16,R16-CAN-MAR,Canada,Morocco,0.20,0.29,0.52,3400000,2.5,0.43,0.58,277000,0,1,,,Round of 16 KNOCKOUT x2 pick locked (Morocco 1-0 away); near-even MAR favored
+2026-07-04T00:00:00-04:00,2026-07-04T17:00:00-04:00,R16,R16-PAR-FRA,Paraguay,France,0.05,0.13,0.83,1800000,2.5,0.59,0.42,472000,0,2,,,Round of 16 KNOCKOUT x2 pick locked (France 2-0 away); 0-2 edged 0-1
