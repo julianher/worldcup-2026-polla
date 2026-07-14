@@ -63,6 +63,13 @@ ask ¢.**
    p_under_raw=p_under, knockout=(stage != "group"))`. The pick is `res.best_pred`.
 6. **Give the user the picks** to enter in Pasión de Gol: for each match,
    `home_team H-A away_team` with its E[pts]. Polymarket only.
+   - **Tell the user to enter the pick in the app IMMEDIATELY** and remind them
+     of the app's pre-kickoff lock. Lesson from SF-FRA-ESP 2026-07-14: a
+     locked+released pick scored 0 because it was never typed into the app. The
+     repo is the audit trail; the app is the scoreboard.
+   - Encourage keeping a provisional pick saved in the app as soon as a fixture
+     opens (editable until ~10 min before kickoff) so a missed run never scores
+     zero.
 7. **Record what was submitted:** write the chosen scoreline into
    `submitted_home` / `submitted_away` of the Polymarket row.
 8. **File the screenshots:** move them from `Images/` to `data/screenshots/` with
