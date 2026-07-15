@@ -1,5 +1,10 @@
-captured_date,rank,player_ref,points,podium_champion,podium_runnerup,podium_third,notes
-2026-07-12,1,P1,680,Germany,England,Spain,champion DEAD (Germany eliminated); podium scoring 30-20-10 exact position; pool pays top-3 players only
-2026-07-12,2,P2,670,Spain,Portugal,Brazil,runner-up and third DEAD; shares our Spain-champion slot; our podium twin at +25
-2026-07-12,3,P3,666,France,England,Colombia,third DEAD; France-champ + England-runnerup both live; double-cash risk in a FRA-ENG final
-2026-07-12,17,US,645,Spain,France,England,our pick locked 2026-06-10; Spain-champ ALIVE / France-runnerup dies if Spain advances / England-third ALIVE
+captured_date,rank,player_ref,points,podium_champion,podium_runnerup,podium_third,spain_champ_holder,live_podium_value,notes
+2026-07-15,1,P1,700,Germany,England,Spain,no,0,all slots dead in Spain-or-Arg champ world (GER out / England cannot be RU from bronze match / Spain cannot be third from final); adds only match points
+2026-07-15,2,P2,690,Spain,Portugal,Brazil,yes,30,Spain-champion twin; POR+BRA dead; adds only +30 if Spain wins final; likely 1st-2nd
+2026-07-15,3,P3,679,UNKNOWN,UNKNOWN,UNKNOWN,unknown,unknown,podium NOT captured; if Spain-champ she is 709 and blocks us - STILL NEED THIS
+2026-07-15,4,P4,673,Spain,France,Argentina,yes,30,Spain-champion twin; France-RU and Argentina-third both dead; adds only +30
+2026-07-15,5,P5,671,Spain,France,Portugal,yes,30,Spain-champion twin; France-RU and Portugal-third dead; adds only +30
+2026-07-15,6,P6,670,France,England,Colombia,no,0,France-champ dead England-RU dead Colombia dead; whole podium dead
+2026-07-15,7,P7,668,France,Brazil,England,no,10,France+Brazil dead but England-third LIVE (+10 if England wins bronze); shares our England-third slot
+2026-07-15,8,P8,666,Brazil,France,Spain,no,0,Brazil-champ dead France-RU dead Spain-third dead (Spain in final); whole podium dead
+2026-07-15,15,US,657,Spain,France,England,yes,40,Spain-champ +30 AND England-third +10 (unique edge over the P4/P5 twins whose thirds are dead); France-RU dead
