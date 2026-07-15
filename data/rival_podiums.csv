@@ -7,4 +7,9 @@ captured_date,rank,player_ref,points,podium_champion,podium_runnerup,podium_thir
 2026-07-15,6,P6,670,France,England,Colombia,no,0,France-champ dead England-RU dead Colombia dead; whole podium dead
 2026-07-15,7,P7,668,France,Brazil,England,no,10,France+Brazil dead but England-third LIVE (+10 if England wins bronze); shares our England-third slot
 2026-07-15,8,P8,666,Brazil,France,Spain,no,0,Brazil-champ dead France-RU dead Spain-third dead (Spain in final); whole podium dead
-2026-07-15,15,US,657,Spain,France,England,yes,40,Spain-champ +30 AND England-third +10 (unique edge over the P4/P5 twins whose thirds are dead); France-RU dead
+2026-07-15,9,P9,665,Portugal,Spain,France,no,0,Portugal dead; Spain-RU only lives if ARGENTINA champ; France-third +10 only if France wins bronze (bad for us)
+2026-07-15,10,P10,664,Germany,Argentina,Brazil,no,20,Germany+Brazil dead but Argentina-RU LIVE (+20 if Spain champ makes Argentina runner-up)
+2026-07-15,11,P11,662,Spain,France,Argentina,yes,30,Spain-champion twin; France-RU and Argentina-third dead; +30 only - sits just BELOW us thanks to our England-third
+2026-07-15,12,P12,661,Spain,France,Netherlands,yes,30,Spain-champion twin; thirds dead; +30 only - below us via our England-third edge
+2026-07-15,13,P13,660,Spain,France,Argentina,yes,30,Spain-champion twin; thirds dead; +30 only - below us via our England-third edge
+2026-07-15,15,US,657,Spain,France,England,yes,40,Spain-champ +30 AND England-third +10; the England-third is the ONLY thing keeping us above the P11/P12/P13 twins so England MUST win the bronze match
