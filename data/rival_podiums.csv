@@ -1,7 +1,7 @@
 captured_date,rank,player_ref,points,podium_champion,podium_runnerup,podium_third,spain_champ_holder,live_podium_value,notes
 2026-07-15,1,P1,700,Germany,England,Spain,no,0,all slots dead in Spain-or-Arg champ world (GER out / England cannot be RU from bronze match / Spain cannot be third from final); adds only match points
 2026-07-15,2,P2,690,Spain,Portugal,Brazil,yes,30,Spain-champion twin; POR+BRA dead; adds only +30 if Spain wins final; likely 1st-2nd
-2026-07-15,3,P3,679,UNKNOWN,UNKNOWN,UNKNOWN,unknown,unknown,podium NOT captured; if Spain-champ she is 709 and blocks us - STILL NEED THIS
+2026-07-15,3,P3,679,Spain,France,Argentina,yes,30,Spain-champion twin (8th one); France-RU + Argentina-third dead; jumps to 709 if Spain champ = 2nd place and a blocker ahead of us
 2026-07-15,4,P4,673,Spain,France,Argentina,yes,30,Spain-champion twin; France-RU and Argentina-third both dead; adds only +30
 2026-07-15,5,P5,671,Spain,France,Portugal,yes,30,Spain-champion twin; France-RU and Portugal-third dead; adds only +30
 2026-07-15,6,P6,670,France,England,Colombia,no,0,France-champ dead England-RU dead Colombia dead; whole podium dead
