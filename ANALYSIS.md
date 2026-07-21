@@ -59,13 +59,16 @@ Two exact distributions, one axis:
   probability of such a picker reaching 671 is **4.5×10⁻¹⁰** — about one in
   two billion. By any conventional threshold (p < 0.05, p < 0.001, pick one),
   the result is not luck.
-- Against the **real field**: 641 humans — many of whom watch far more
-  football than the author — produced exactly 3 total scores above 711. Under
-  the null hypothesis that this project was an average pool member, finishing
-  4th or better has probability **4/641 ≈ 0.006**.
-- On **raw match points alone** (no podium bonus) the project's 671 ranked
-  roughly 12th of 641 — top 2% — while carrying a 14-point self-inflicted
-  wound (§5).
+- Against the **real field**: among the 24 players whose final scores and
+  podium picks were captured, 3 finished above 711 once the original rules are
+  applied. Players outside that captured window cannot be ruled out (see the
+  blind-spot note in §6), so **4th is the best-supported position, not a
+  certified one** — the defensible claim is "top ~1% of 641."
+- Note what the field's own scores prove: the player who finished with the
+  most **raw match points** (700, before any podium bonus) held a completely
+  dead podium. At least five captured players out-scored this project on raw
+  match points. The pool was not won by match-picking alone, and this project
+  did not win it there either — see §4 and §7.
 
 ## 4. Every strategy, same matches, same results
 
@@ -101,6 +104,14 @@ Three honest observations:
   needed Spain, got it).
 - **Execution is a strategy too**: the gap between 685 and 671 is one missed
   phone entry. It out-weighed the entire per-match model edge.
+
+**The honest reading of this table**: a disciplined human with no model, who
+mechanically picked the favorite to win 1-0 in all 104 matches, scores 650 —
+within 21 points of a machine that consumed live prediction-market data for
+five weeks. The model's advantage is real, reproducible, and *small*. What
+separated this project from that hypothetical human was not per-match
+accuracy; it was the podium bet (+40) and the endgame pivot (+16), neither of
+which is a football-knowledge problem.
 
 ## 5. Calibration — trusting the market was correct
 
