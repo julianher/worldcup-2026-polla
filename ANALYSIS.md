@@ -65,58 +65,112 @@ Two exact distributions, one axis:
 - Against the **real field**: among the 24 players whose final scores and
   podium picks were captured, 3 finished above 711 once the original rules are
   applied. Players outside that captured window cannot be ruled out (see the
-  blind-spot note in §6), so **4th is the best-supported position rather than a
+  blind-spot note in §7), so **4th is the best-supported position rather than a
   certified one**. The defensible claim is "top ~1% of 641."
 - Note what the field's own scores prove: the player who finished with the most
   **raw match points** (700, before any podium bonus) held a completely dead
   podium. At least five captured players out-scored this project on raw match
   points. The pool was not won by match-picking alone, and this project did not
-  win it there either (see §4 and §7).
+  win it there either (see §4 and §8).
 
-## 4. Every strategy, same matches, same results
+## 4. Every strategy: was it better, or just luckier?
 
 The shadow data makes honest baselines possible. Every strategy below is scored
-on the identical 104 real results.
+on the identical 104 real results. But raw totals are a trap, because one
+tournament is a single sample. So each strategy is shown twice: what it was
+*expected* to score under the model's probabilities, and what it *actually*
+scored. The gap is that strategy's luck.
 
 ![strategies](analysis/figures/04_strategies.png)
 
-| Strategy | Points | What it represents |
-|---|---:|---|
-| Submitted + the missed SF entry | **685** | the model and strategy, executed perfectly |
-| **Submitted (as it happened)** | **671** | what actually went to the scoreboard |
-| Codere correct-score board | 661 | "just copy the bookmaker's most likely score" |
-| Pure model argmax | 655 | the engine with no strategic overlay |
-| Favorite 1-0 chalk | 650 | a disciplined fan: favorite wins, 1-0, every time |
-| Favorite 2-1 chalk | 632 | the most common human instinct |
-| Always 1-1 | 424 | the draw troll |
-| Know-nothing (expected) | 392 | random scorelines |
+| Strategy | Expected | Actual | Luck |
+|---|---:|---:|---:|
+| Pure model argmax | **657.5** | 655 | −2.5 |
+| Favorite 1-0 chalk | 652.4 | 650 | −2.4 |
+| Submitted (103 entered) | 646.3 | **671** | +24.7 |
+| Favorite 2-1 chalk | 614.0 | 632 | +18.0 |
+| Codere correct-score board | 600.3 | 661 | **+60.7** |
+| Know-nothing (uniform) | 391.9 | 392 | +0.0 |
+| Always 1-1 | 362.3 | 424 | **+61.7** |
 
-Three honest observations:
+Sorting by expectation instead of by outcome changes the story completely:
 
+- **The model's argmax was the best per-match strategy available**, at 657.5
+  expected points, higher than every baseline. It underperformed its own
+  expectation by 2.5 points, which is noise.
+- **Copying the bookmaker's correct-score board did not beat the model.** It
+  finished with 661 actual against the model's 655, which looks like a win, but
+  it was expected to score only 600.3. It got **+60.7 points of luck**, the
+  largest windfall in the table. Picking the single most *likely* scoreline is
+  a genuinely worse strategy under a 5/2/2/1 rule than picking the
+  highest-*expected-value* scoreline, by roughly 57 points across a tournament.
+  This one tournament happened to reward it.
+- **"Always 1-1" got +61.7 of luck for the same reason.** The 2026 knockouts
+  were unusually draw-heavy (two doubled draws in the quarterfinals alone, and
+  a 0-0 final). Draw-shaped strategies were flattered by this specific
+  tournament and would be punished in most others.
 - **The per-match model's edge over a disciplined human is real but thin**:
-  argmax 655 versus favorite-1-0 chalk 650. Anyone who mechanically picked the
-  favorite 1-0 for a month would have finished near the top of this pool. The
-  model's per-match advantage comes from knowing *when* the favorite's modal
-  scoreline isn't 1-0 (totals-informed lambdas), worth about +5 over 104
-  matches. Nobody should sell that as alpha.
-- **The strategic overlay was worth +16** (671 versus 655), all of it from the
-  final four matches, where the objective switched from maximizing expected
-  points to maximizing P(top-3). That meant picking outcomes *correlated* with
-  the live podium slots instead of the most likely ones. The deviations went
-  3-for-3 on direction: needed Argentina, got it; needed England, got it;
-  needed Spain, got it.
-- **Execution is a strategy too.** The gap between 685 and 671 is one missed
-  phone entry, and it outweighed the entire per-match model edge.
+  657.5 expected versus 652.4 for mechanically picking the favorite 1-0 every
+  time. That is +5 points over 104 matches. Nobody should sell that as alpha.
+- **The submitted picks show a deliberate expectation sacrifice.** At 646.3
+  expected over 103 entries they sit *below* pure argmax, because the endgame
+  deviations knowingly traded expected points for P(top-3). They scored 671
+  anyway. The strategy was intentional; the +24.7 on top was variance.
 
-**The honest reading of this table**: a disciplined human with no model, who
-mechanically picked the favorite to win 1-0 in all 104 matches, scores 650.
-That is within 21 points of a machine that consumed live prediction-market data
-for five weeks. The model's advantage is real, reproducible, and *small*. What
-separated this project from that hypothetical human was not per-match accuracy.
-It was the podium bet (+40) and the endgame pivot (+16), neither of which is a
-football-knowledge problem.
+**The honest reading**: a disciplined human with no model, mechanically picking
+the favorite to win 1-0 in all 104 matches, was within 5 expected points of the
+machine. What separated this project from that hypothetical human was not
+per-match accuracy. It was the podium bet (+40) and the endgame pivot (+16),
+neither of which is a football-knowledge problem.
 
-## 5. Calibration: trusting the market was correct
+## 5. The probabilities are a commodity
+
+The two data sources in this repo could hardly be more different in mechanism.
+Polymarket is a peer-to-peer crypto exchange where strangers post real money
+against each other. Codere is a licensed Spanish bookmaker setting prices with
+a trading desk and a margin. They share no infrastructure and no incentive
+structure.
+
+They produced, for practical purposes, **the same numbers**.
+
+![consensus](analysis/figures/06_consensus.png)
+
+| Test | Result |
+|---|---|
+| Correlation across 312 de-vigged probabilities | **r = 0.9994** |
+| Mean absolute gap | **0.61 percentage points** |
+| Largest single disagreement in 104 matches | 2.80 pp |
+| Matches where they named a different favorite | **0 of 104** |
+| Matches where the model returned an identical pick from either feed | 101 of 104 |
+| Brier score | 0.5032 (Polymarket) vs 0.4995 (Codere) |
+
+Not once in 104 matches did the exchange and the bookmaker disagree about who
+was more likely to win. Their Brier scores differ by 0.004, which is nothing.
+This is what a global consensus looks like when you plot it: a straight line.
+
+Three consequences, and they cut in different directions:
+
+- **There is no secret probability.** These numbers were free, public, and
+  identical everywhere. Nobody in that pool of 641 was information-poor. Every
+  participant could have opened the same page.
+- **The model is therefore not where the edge lives**, and this project never
+  claimed otherwise. Feeding it either source produces the same pick 97% of the
+  time. Building the engine was a way to apply the consensus *consistently*,
+  not a way to improve on it. In that sense it really is, as the author put it,
+  mostly for fun.
+- **And yet the consensus alone is not sufficient**, which §4 proves. Codere
+  publishes its own correct-score favorite. Copying it blindly was 57 expected
+  points worse than converting the same probabilities into pool-optimal picks.
+  The consensus tells you what is *likely*. It does not tell you what to
+  *submit* under a 5/2/2/1-doubled rule with a top-3 payout, and it says
+  nothing at all about the two decisions that actually decided this
+  tournament.
+
+The edge was never informational. It was procedural: use the free consensus,
+convert it correctly for the scoring rule, do it 104 times without flinching,
+and change objective when the payout structure demands it.
+
+## 6. Calibration: trusting the market was correct
 
 ![calibration](analysis/figures/05_calibration.png)
 
@@ -137,7 +191,7 @@ built on them was built on rock.** The edge never came from disagreeing with
 the market. It came from *optimizing what the market doesn't care about*, which
 is the pool's scoring rule and payout structure.
 
-## 6. The two points
+## 7. The two points
 
 The money was missed by two points. The complete decomposition:
 
@@ -158,10 +212,10 @@ the differentiated pick would have cashed. Lesson recorded: *in any endgame,
 enumerate everyone within maximum-remaining-bonus of the cut, not everyone you
 can see.*
 
-## 7. What this project actually demonstrates
+## 8. What this project actually demonstrates
 
 - **Markets are calibrated, so use them.** Free, sharp probability estimates
-  beat anything an individual can produce (§5).
+  beat anything an individual can produce (§5 and §6).
 - **The edge is in the scoring rule, not the probabilities.** Optimizing
   5/2/2/1-doubled expected value is not the same as predicting the most likely
   score (§4).
@@ -172,7 +226,7 @@ can see.*
   tails. A strategy that finishes 4th repeatably will sometimes lose to
   someone's hot month, and that is the correct trade.
 - **Process beats model.** The single largest controllable loss was not a
-  probability estimate. It was a save button (§6).
+  probability estimate. It was a save button (§7).
 
 ---
 

@@ -134,9 +134,58 @@ cs_total = sum(score_points((int(crows[m["id"]]["cs_pred_home"]),
                              int(crows[m["id"]]["cs_pred_away"])),
                             m["actual"], knockout=m["ko"]) for m in matches)
 bots["Codere correct-score board"] = cs_total
+
+def ev_of(pick, M, ko):
+    return sum(M[i][j] * score_points(pick, (i, j), knockout=ko)
+               for i in range(11) for j in range(11))
+
+cs_pick = lambda m: (int(crows[m["id"]]["cs_pred_home"]), int(crows[m["id"]]["cs_pred_away"]))
+bot_defs = {
+    "Pure model argmax": lambda m: m["rp"].best_pred,
+    "Codere correct-score board": cs_pick,
+    "Favorite 1-0 chalk": lambda m: favorite_pick(m, 1, 0),
+    "Favorite 2-1 chalk": lambda m: favorite_pick(m, 2, 1),
+    "Always 1-1": lambda m: (1, 1),
+}
+# expected vs realized: separates "better strategy" from "got lucky"
+ev_table = {"Submitted (103 entered)": (mu_p, float(actual_total))}
+for name, f in bot_defs.items():
+    ev_table[name] = (sum(ev_of(f(m), m["M"], m["ko"]) for m in matches),
+                      float(bot_total(f)))
+ev_table["Know-nothing (uniform)"] = (mu_r, mu_r)
 print("\n== STRATEGY TOTALS (104 matches, real results) ==")
 for k, val in sorted(bots.items(), key=lambda t: -t[1]):
     print(f"  {k:36} {val:7.1f}")
+print("\n== EXPECTED vs REALIZED (was it a better strategy, or luckier?) ==")
+print(f"  {'strategy':32} {'E[pts]':>8} {'actual':>8} {'luck':>8}")
+for k, (e_, a_) in sorted(ev_table.items(), key=lambda t: -t[1][0]):
+    print(f"  {k:32} {e_:8.1f} {a_:8.0f} {a_ - e_:+8.1f}")
+
+# ------------------------------- 5. source agreement (the consensus test)
+P_, C_, agree_fav, same_pick = [], [], 0, 0
+cod_brier, poly_brier_local = [], []
+for m in matches:
+    c = crows[m["id"]]
+    rc = pick_from_raw(float(c["p_home"]), float(c["p_draw"]), float(c["p_away"]),
+                       ou_line=float(c["ou_line"]), p_over_raw=float(c["p_over"]),
+                       p_under_raw=float(c["p_under"]), knockout=m["ko"])
+    p3 = [m["rp"].p_home, m["rp"].p_draw, m["rp"].p_away]
+    c3 = [rc.p_home, rc.p_draw, rc.p_away]
+    P_ += p3; C_ += c3
+    agree_fav += int(np.argmax(p3) == np.argmax(c3))
+    same_pick += int(m["rp"].best_pred == rc.best_pred)
+    ah, aa = m["actual"]
+    o = [ah > aa, ah == aa, ah < aa]
+    cod_brier.append(sum((a_ - b_) ** 2 for a_, b_ in zip(c3, o)))
+    poly_brier_local.append(sum((a_ - b_) ** 2 for a_, b_ in zip(p3, o)))
+P_, C_ = np.array(P_), np.array(C_)
+r_sources = float(np.corrcoef(P_, C_)[0, 1])
+mad = float(np.abs(P_ - C_).mean())
+print("\n== SOURCE AGREEMENT (Polymarket exchange vs Codere bookmaker) ==")
+print(f"correlation r = {r_sources:.4f}   mean abs difference {100*mad:.2f} pp   "
+      f"max {100*np.abs(P_-C_).max():.2f} pp")
+print(f"agree on the favorite: {agree_fav}/104   model returns same pick: {same_pick}/104")
+print(f"Brier: Polymarket {np.mean(poly_brier_local):.4f}  Codere {np.mean(cod_brier):.4f}")
 
 # --------------------------------------------------- 4. calibration
 briers, unis = [], []
@@ -288,21 +337,47 @@ ax.set_yticks([])
 ax.grid(visible=False)
 save(fig, "03_skill_vs_luck.png")
 
-# F4: strategies scored on the real 104 results
-fig, ax = plt.subplots(figsize=(9.6, 4.6))
-order = sorted(bots.items(), key=lambda t: t[1])
-names = [k for k, _ in order]; vals = [v for _, v in order]
-colors = [BLUE if k.startswith("Submitted") else
-          LBLUE if "argmax" in k else AXIS for k in names]
-bars = ax.barh(names, vals, color=colors, height=0.62, zorder=3)
-for b, v in zip(bars, vals):
-    ax.text(v + 4, b.get_y() + b.get_height() / 2, f"{v:.0f}",
-            va="center", color=INK, fontsize=10, fontweight="bold")
+# F4: strategies, expected vs realized (separates skill from luck)
+fig, ax = plt.subplots(figsize=(9.8, 5.4))
+order = sorted(ev_table.items(), key=lambda t: t[1][0])
+names = [k for k, _ in order]
+exp_v = [v[0] for _, v in order]
+act_v = [v[1] for _, v in order]
+y = np.arange(len(names)); h = 0.38
+ax.barh(y + h / 2 + 0.01, exp_v, height=h, color=BLUE, zorder=3,
+        label="expected under the model")
+ax.barh(y - h / 2 - 0.01, act_v, height=h, color=GREEN, zorder=3,
+        label="actually scored")
+for yi, (e_, a_) in enumerate(zip(exp_v, act_v)):
+    ax.text(e_ + 5, yi + h / 2 + 0.01, f"{e_:.0f}", va="center",
+            color=SEC, fontsize=9)
+    ax.text(a_ + 5, yi - h / 2 - 0.01, f"{a_:.0f}", va="center",
+            color=INK, fontsize=9, fontweight="bold")
+    if abs(a_ - e_) >= 15:
+        ax.text(max(e_, a_) + 52, yi, f"luck {a_ - e_:+.0f}", va="center",
+                color=MUT, fontsize=9, style="italic")
+ax.set_yticks(y); ax.set_yticklabels(names)
 ax.grid(axis="y", visible=False)
-ax.set_xlim(0, 760)
-ax.set_title("Every strategy, same 104 matches, same results", loc="left", fontsize=14)
-ax.set_xlabel("total points")
+ax.set_xlim(0, 820)
+ax.legend(loc="lower right", frameon=False, labelcolor=SEC)
+ax.set_title("Was it a better strategy, or a luckier one?", loc="left", fontsize=14)
+ax.set_xlabel("points over 104 matches (sorted by expected)")
 save(fig, "04_strategies.png")
+
+# F6: the two sources agree (the consensus test)
+fig, ax = plt.subplots(figsize=(6.6, 6.2))
+ax.plot([0, .95], [0, .95], color=AXIS, lw=1.2, ls="--", zorder=2)
+ax.scatter(P_, C_, s=26, color=BLUE, alpha=0.55, zorder=3,
+           edgecolor=SURF, linewidth=0.5)
+ax.set_xlim(0, .95); ax.set_ylim(0, .95)
+ax.set_xlabel("Polymarket (peer-to-peer exchange)")
+ax.set_ylabel("Codere (traditional bookmaker)")
+ax.set_title("The same numbers, twice\n312 outcome probabilities, two independent sources",
+             loc="left", fontsize=13)
+ax.text(.05, .86, f"r = {r_sources:.4f}\nmean gap {100*mad:.2f} pp\n"
+                  f"same favorite {agree_fav}/104",
+        fontsize=10.5, color=SEC, va="top")
+save(fig, "06_consensus.png")
 
 # F5: reliability of the de-vigged probabilities
 fig, ax = plt.subplots(figsize=(6.4, 6.0))
