@@ -1,13 +1,13 @@
 """Tournament post-mortem: skill vs luck, calibration, and baselines.
 
 Reads data/match_odds_polymarket.csv (104 matches, complete), computes:
-  1. Promise vs delivery — expected points of the submitted picks under the
+  1. Promise vs delivery: expected points of the submitted picks under the
      model's own probabilities vs the 671 actually earned (exact convolution
      PMF, no Monte Carlo needed).
-  2. Luck benchmark — the exact PMF of a know-nothing picker (uniform over
+  2. Luck benchmark: the exact PMF of a know-nothing picker (uniform over
      0-3 x 0-3 scorelines) on the REAL results, and where 671 falls in it.
-  3. Baseline strategies — pure argmax, Codere shadow bots, chalk heuristics.
-  4. Probability calibration — Brier score, reliability curve, favorite hit
+  3. Baseline strategies: pure argmax, Codere shadow bots, chalk heuristics.
+  4. Probability calibration: Brier score, reliability curve, favorite hit
      rate, exact-score expectation vs realization.
 Figures land in analysis/figures/, stats print to stdout.
 """
@@ -213,7 +213,7 @@ def save(fig, name):
     plt.close(fig)
     print(f"wrote analysis/figures/{name}")
 
-# F1 — the season: pool position over time
+# F1: the season: pool position over time
 srows = list(csv.DictReader(open(ROOT / "data" / "pool_standings.csv")))
 pos = [int(r["position"]) for r in srows]
 dates = [r["date"][5:] for r in srows]
@@ -226,9 +226,9 @@ ax.set_yticks([1, 3, 10, 30, 100, 300])
 ax.set_yticklabels(["1st", "3rd", "10th", "30th", "100th", "300th"])
 ax.invert_yaxis()
 ax.grid(axis="x", visible=False)
-ann = [(5, "311th — matchday 6 low", (0, -16), "center"),
+ann = [(5, "311th, matchday 6 low", (0, -16), "center"),
        (19, "1st after the R32 opener", (12, -4), "left"),
-       (33, "19th — the missed\nsemifinal entry", (0, -26), "center"),
+       (33, "19th: the missed\nsemifinal entry", (0, -26), "center"),
        (len(pos) - 1, "4th of 641\n(original rules)", (-10, 16), "center")]
 for i, txt, (dx, dy), ha in ann:
     ax.annotate(txt, (i, pos[i]), textcoords="offset points", xytext=(dx, dy),
@@ -236,11 +236,11 @@ for i, txt, (dx, dy), ha in ann:
     ax.plot(i, pos[i], "o", ms=8, mfc="none", mec=INK, mew=1.2, zorder=4)
 step = max(1, len(pos) // 9)
 ax.set_xticks(list(x)[::step]); ax.set_xticklabels(dates[::step])
-ax.set_title("A season in the pool — position among 641 players", loc="left", fontsize=14)
+ax.set_title("A season in the pool: position among 641 players", loc="left", fontsize=14)
 ax.set_xlabel("2026 (month-day)")
 save(fig, "01_season.png")
 
-# F2 — promise vs delivery, cumulative
+# F2: promise vs delivery, cumulative
 fig, ax = plt.subplots(figsize=(9.6, 5.0))
 xs = np.arange(1, len(cum_e) + 1)
 sd_band = np.sqrt(np.array(cum_v))
@@ -258,12 +258,12 @@ ax.axvline(72.5, color=AXIS, lw=1, ls=":")
 ax.text(72.5, ax.get_ylim()[1] * 0.02, " knockouts (points ×2) ",
         color=MUT, fontsize=9, ha="left")
 ax.legend(loc="upper left", frameon=False, labelcolor=SEC)
-ax.set_title("Promise vs delivery — the probabilities kept their word", loc="left", fontsize=14)
+ax.set_title("Promise vs delivery: the probabilities kept their word", loc="left", fontsize=14)
 ax.set_xlabel("entered picks, chronological (103 of 104)")
 ax.set_xlim(0, 118)
 save(fig, "02_promise_vs_delivery.png")
 
-# F3 — skill vs luck: two exact distributions and where 671 sits
+# F3: skill vs luck: two exact distributions and where 671 sits
 fig, ax = plt.subplots(figsize=(9.6, 5.0))
 lo, hi = 380, 780
 xr = np.arange(lo, hi)
@@ -282,13 +282,13 @@ ax.annotate(f"know-nothing picker\n{mu_r:.0f} ± {sd_r:.0f}\n"
             (mu_r + 28, ax.get_ylim()[1] * 0.55), color=SEC, fontsize=10, ha="center")
 ax.annotate(f"model promise\n{mu_p:.0f} ± {sd_p:.0f}",
             (mu_p - 30, ax.get_ylim()[1] * 0.30), color=BLUE, fontsize=10, ha="center")
-ax.set_title("Skill vs luck — where 671 points actually sits", loc="left", fontsize=14)
+ax.set_title("Skill vs luck: where 671 points actually sits", loc="left", fontsize=14)
 ax.set_xlabel("total tournament points")
 ax.set_yticks([])
 ax.grid(visible=False)
 save(fig, "03_skill_vs_luck.png")
 
-# F4 — strategies scored on the real 104 results
+# F4: strategies scored on the real 104 results
 fig, ax = plt.subplots(figsize=(9.6, 4.6))
 order = sorted(bots.items(), key=lambda t: t[1])
 names = [k for k, _ in order]; vals = [v for _, v in order]
@@ -304,7 +304,7 @@ ax.set_title("Every strategy, same 104 matches, same results", loc="left", fonts
 ax.set_xlabel("total points")
 save(fig, "04_strategies.png")
 
-# F5 — reliability of the de-vigged probabilities
+# F5: reliability of the de-vigged probabilities
 fig, ax = plt.subplots(figsize=(6.4, 6.0))
 ax.plot([0, 1], [0, 1], color=AXIS, lw=1.2, ls="--", zorder=2)
 pr = [t[0] for t in rel]; ob = [t[1] for t in rel]; ns = [t[2] for t in rel]
@@ -316,7 +316,7 @@ for p_, o_, n in rel:
 ax.set_xlim(0, 0.8); ax.set_ylim(0, 0.8)
 ax.set_xlabel("predicted probability (H/D/A, de-vigged)")
 ax.set_ylabel("observed frequency")
-ax.set_title("Calibration — 312 outcome probabilities\nacross 104 matches", loc="left", fontsize=13)
+ax.set_title("Calibration: 312 outcome probabilities\nacross 104 matches", loc="left", fontsize=13)
 save(fig, "05_calibration.png")
 
 print("\ndone.")

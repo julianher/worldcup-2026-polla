@@ -6,9 +6,9 @@ still move slightly — exact count per date in `data/pool_standings.csv`), one
 custom scoring rule.**
 
 > **The tournament is over.** Final: **4th of 641** by the rules set at the
-> start — two points off the paid podium. The full statistical post-mortem
+> start, two points off the paid podium. The full statistical post-mortem
 > (skill vs luck at p ≈ 4.5×10⁻¹⁰, calibration, strategy baselines, and the
-> honest accounting of the two points) is in **[ANALYSIS.md](ANALYSIS.md)**.
+> honest accounting of those two points) is in **[ANALYSIS.md](ANALYSIS.md)**.
 
 ## Thesis
 
